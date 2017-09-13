@@ -24,15 +24,13 @@ public:
 	bool Start();
 	update_status PreUpdate(float dt);
 	update_status Update(float dt);
-	bool CleanUp();
-	void Create_Guy(PhysBody3D **body, btHingeConstraint **hinge, vec3 position, guy guy_type, float angle);
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
-	void Stage_Activation(int stage);
-	void Reset();
+
+
 
 public:
 
-
+/*
 	PhysBody3D* pb_chassis;
 	Cube p_chassis;
 
@@ -80,4 +78,5 @@ public:
 	bool win = false;
 	uint music_scene1 = 0;
 	uint finish_sound = 0;
+	*/
 };

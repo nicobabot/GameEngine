@@ -70,8 +70,8 @@ bool ModuleWindow::Init()
 	}
 
 	//Lock the cursor on screen 
-	SDL_ShowCursor(SDL_DISABLE);
-	SDL_SetWindowGrab(window, SDL_TRUE);
+	//SDL_ShowCursor(SDL_DISABLE);
+	//SDL_SetWindowGrab(window, SDL_TRUE);
 
 	return ret;
 }

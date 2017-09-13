@@ -63,7 +63,7 @@ update_status ModuleCamera3D::Update(float dt)
 
 
 
-	btVector3 temp = App->player->turret->body->getWorldTransform().getOrigin();
+	/*btVector3 temp = App->player->turret->body->getWorldTransform().getOrigin();
 
 	float* tempC = new float[16];
 	App->player->vehicle->vehicle->getChassisWorldTransform().getOpenGLMatrix(tempC);
@@ -78,7 +78,7 @@ update_status ModuleCamera3D::Update(float dt)
 
 	Position += C*vec3(-10, 3, 0);
 
-	LookAt(vec3(temp.getX(), temp.getY(), temp.getZ()));
+	LookAt(vec3(temp.getX(), temp.getY(), temp.getZ()));*/
 
 
 	
