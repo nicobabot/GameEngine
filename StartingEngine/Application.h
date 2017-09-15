@@ -12,7 +12,8 @@
 #include "ModuleCamera3D.h"
 #include "ModulePhysics3D.h"
 #include "ModulePlayer.h"
-
+#include <list>
+#include <vector>
 class Application
 {
 public:
@@ -29,8 +30,8 @@ private:
 
 	Timer	ms_timer;
 	float	dt;
-	p2List<Module*> list_modules;
-
+	//p2List<Module*> list_modules;
+	std::list<Module*> list_modules;
 public:
 
 	Application();
