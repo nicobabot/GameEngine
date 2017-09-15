@@ -3,7 +3,7 @@
 #include "Globals.h"
 #include "p2List.h"
 #include "Primitive.h"
-
+#include <list>
 #include "Bullet/include/btBulletDynamicsCommon.h"
 
 // Recommended scale is 1.0f == 1 meter, no less than 0.2 objects
@@ -48,11 +48,16 @@ private:
 	btDefaultVehicleRaycaster*			vehicle_raycaster;
 	DebugDrawer*						debug_draw;
 
-	p2List<btCollisionShape*> shapes;
-	p2List<PhysBody3D*> bodies;
+	std::list<btCollisionShape*> shapes;
+	std::list<PhysBody3D*> bodies;
+	std::list<btDefaultMotionState*> motions;
+	std::list<btTypedConstraint*> constraints;
+
+
+	/*p2List<PhysBody3D*> bodies;
 	p2List<btDefaultMotionState*> motions;
 	p2List<btTypedConstraint*> constraints;
-	p2List<PhysVehicle3D*> vehicles;
+	p2List<PhysVehicle3D*> vehicles;*/
 	
 };
 

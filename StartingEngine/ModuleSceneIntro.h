@@ -30,6 +30,18 @@ public:
 
 public:
 
+	PhysBody3D*PlainGame_Body;
+	p2DynArray<Cube> MyCubeMap;
+	p2DynArray<PhysBody3D*> MyPhysbodyCubeMap;
+
+	p2DynArray<Sphere> MySphereObj;
+	p2DynArray<PhysBody3D*> MyPhysbodySphereobj;
+
+	p2DynArray<Cube> MyCubeObj;
+	p2DynArray<PhysBody3D*> MyPhysbodyCubeobj;
+
+	p2DynArray<Cube> MySensorCube;
+	p2DynArray<PhysBody3D*> MySensorCubeBody;
 /*
 	PhysBody3D* pb_chassis;
 	Cube p_chassis;

@@ -21,10 +21,11 @@ Application::Application()
 	AddModule(camera);
 	AddModule(input);
 	AddModule(audio);
-	AddModule(physics);
+	
 	
 	// Scenes
 	AddModule(scene_intro);
+	AddModule(physics);
 	AddModule(player);
 
 	// Renderer last!
