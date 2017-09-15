@@ -9,6 +9,8 @@
 
 #include"imgui.h"
 
+
+
 ModuleSceneIntro::ModuleSceneIntro(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
 }
@@ -26,7 +28,7 @@ bool ModuleSceneIntro::Start()
 	ImGuiIO& io{ ImGui::GetIO() };
 	//io.IniFilename = "/Settings/imgui.ini";
 	
-
+	
 	//Only to try if we can print objects
 	/*App->camera->LookAt(vec3(0, 0, 0));
 	App->camera->Position = {0,80,0};
@@ -55,10 +57,15 @@ update_status ModuleSceneIntro::PreUpdate(float dt)
 // Update
 update_status ModuleSceneIntro::Update(float dt)
 {
-
+	
 	ImGui_ImplSdlGL3_NewFrame(App->window->window);
 	ImGui::ShowTestWindow();
-	
+
+	ImGui::Begin("Click here to close the APP");
+	paco=ImGui::Button("Click here to close the APP", ImVec2(0, 0));
+	ImGui::Text("Hello, world!");
+	ImGui::End();
+
 	for (int i = 0; i < MyCubeMap.size(); i++) {
 		MyPhysbodyCubeMap[i]->GetTransform(&MyCubeMap[i].transform);
 		MyCubeMap[i].Render();
@@ -74,13 +81,24 @@ update_status ModuleSceneIntro::Update(float dt)
 		MyCubeObj[i].Render();
 	}
 
+	
+
 	ImGui::Render();
+	
 	return UPDATE_CONTINUE;
 }
 
 void ModuleSceneIntro::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
 {
 	
+}
+
+update_status ModuleSceneIntro::PostUpdate(float dt)
+{
+	if (paco == true) {
+		return UPDATE_STOP;
+	}
+	return UPDATE_CONTINUE;
 }
 
 

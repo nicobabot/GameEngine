@@ -28,7 +28,7 @@ public:
 	update_status PreUpdate(float dt);
 	update_status Update(float dt);
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
-
+	update_status PostUpdate(float dt);
 
 
 public:
@@ -48,6 +48,6 @@ public:
 
 	std::vector<Cube>MySensorCube;
 	std::vector<PhysBody3D*>MySensorCubeBody;
-
+	bool paco = false;
 
 };
