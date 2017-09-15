@@ -4,6 +4,7 @@
 #include "Globals.h"
 #include "Primitive.h"
 #include"j1PerfTimer.h"
+#include<vector>
 
 #define MAX_SNAKE 2
 #define MAX_CUBE 50
@@ -31,64 +32,20 @@ public:
 public:
 
 	PhysBody3D*PlainGame_Body;
-	p2DynArray<Cube> MyCubeMap;
-	p2DynArray<PhysBody3D*> MyPhysbodyCubeMap;
 
-	p2DynArray<Sphere> MySphereObj;
-	p2DynArray<PhysBody3D*> MyPhysbodySphereobj;
+	std::vector<Cube>MyCubeMap;
+	std::vector<PhysBody3D*>MyPhysbodyCubeMap;
 
-	p2DynArray<Cube> MyCubeObj;
-	p2DynArray<PhysBody3D*> MyPhysbodyCubeobj;
+	std::vector<Cube>MySphereObj;
+	std::vector<PhysBody3D*>MyPhysbodySphereobj;
 
-	p2DynArray<Cube> MySensorCube;
-	p2DynArray<PhysBody3D*> MySensorCubeBody;
-/*
-	PhysBody3D* pb_chassis;
-	Cube p_chassis;
 
-	PhysBody3D* pb_wheel;
-	Cylinder p_wheel;
+	std::vector<Cube>MyCubeObj;
+	std::vector<PhysBody3D*>MyPhysbodyCubeobj;
 
-	PhysBody3D* pb_wheel2;
-	Cylinder p_wheel2;
 
-	PhysMotor3D* left_wheel;
-	PhysMotor3D* right_wheel;
+	std::vector<Cube>MySensorCube;
+	std::vector<PhysBody3D*>MySensorCubeBody;
 
-	PhysBody3D*ballkickerObject;
-	Sphere n;
-	PhysBody3D* turret;
-	p2DynArray<Cube> MyCubeMap;
-	p2DynArray<PhysBody3D*> MyPhysbodyCubeMap;
-	
-	p2DynArray<Sphere> MySphereObj;
-	p2DynArray<PhysBody3D*> MyPhysbodySphereobj;
 
-	p2DynArray<Cube> MyCubeObj;
-	p2DynArray<PhysBody3D*> MyPhysbodyCubeobj;
-
-	p2DynArray<Cube> MySensorCube;
-	p2DynArray<PhysBody3D*> MySensorCubeBody;
-	j1PerfTimer timer;
-
-	PhysBody3D* house_top_body;
-
-	p2DynArray<PhysBody3D*> Stage1_guys_bodys;
-	p2DynArray<btHingeConstraint*> Stage1_guys_hinges;
-	p2DynArray<PhysBody3D*> Stage2_guys_bodys;
-	p2DynArray<btHingeConstraint*> Stage2_guys_hinges;
-	p2DynArray<PhysBody3D*> Stage3_guys_bodys;
-	p2DynArray<btHingeConstraint*> Stage3_guys_hinges;
-	p2DynArray<PhysBody3D*> Stage4_guys_bodys;
-	p2DynArray<btHingeConstraint*> Stage4_guys_hinges;	
-	p2DynArray<PhysBody3D*> Stage5_guys_bodys;
-	p2DynArray<btHingeConstraint*> Stage5_guys_hinges;
-	p2DynArray<PhysBody3D*> Stage6_guys_bodys;
-	p2DynArray<btHingeConstraint*> Stage6_guys_hinges;
-
-	PhysBody3D*PlainGame_Body;
-	bool win = false;
-	uint music_scene1 = 0;
-	uint finish_sound = 0;
-	*/
 };

@@ -6,7 +6,7 @@
 class btRigidBody;
 class Module;
 #include"ModuleSceneIntro.h"
-
+#include<list>
 // =================================================
 struct PhysBody3D
 {
@@ -29,7 +29,8 @@ private:
 	bool is_sensor = false;
 
 public:
-	p2List<Module*> collision_listeners;
+	std::list<Module*>collision_listeners;
+	//p2List<Module*> collision_listeners;
 	bool tokill;
 	bool active=true;
 };
