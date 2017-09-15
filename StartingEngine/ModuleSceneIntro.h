@@ -4,6 +4,8 @@
 #include "Globals.h"
 #include "Primitive.h"
 #include"j1PerfTimer.h"
+#include"imgui.h"
+
 #include<vector>
 
 #define MAX_SNAKE 2

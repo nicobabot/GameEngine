@@ -4,6 +4,10 @@
 #include "Primitive.h"
 #include "PhysBody3D.h"
 #include"ModulePlayer.h"
+#include "Glew\include\glew.h"
+#include "imgui_impl_sdl_gl3.h"
+
+#include"imgui.h"
 
 ModuleSceneIntro::ModuleSceneIntro(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -17,6 +21,11 @@ bool ModuleSceneIntro::Start()
 {
 	LOG("Loading Intro assets");
 	bool ret = true;
+	glewInit();
+	ImGui_ImplSdlGL3_Init(App->window->window);
+	ImGuiIO& io{ ImGui::GetIO() };
+	//io.IniFilename = "/Settings/imgui.ini";
+	
 
 	//Only to try if we can print objects
 	/*App->camera->LookAt(vec3(0, 0, 0));
@@ -29,7 +38,7 @@ bool ModuleSceneIntro::Start()
 	PlainGame_Body->SetPos(50, 0, 0);
 	PlainGame_Body->collision_listeners.add(this);
 	MyPhysbodyCubeMap.push_back(PlainGame_Body);*/
-
+	
 	return ret;
 }
 
@@ -46,6 +55,9 @@ update_status ModuleSceneIntro::PreUpdate(float dt)
 // Update
 update_status ModuleSceneIntro::Update(float dt)
 {
+
+	ImGui_ImplSdlGL3_NewFrame(App->window->window);
+	ImGui::ShowTestWindow();
 	
 	for (int i = 0; i < MyCubeMap.size(); i++) {
 		MyPhysbodyCubeMap[i]->GetTransform(&MyCubeMap[i].transform);
@@ -62,7 +74,7 @@ update_status ModuleSceneIntro::Update(float dt)
 		MyCubeObj[i].Render();
 	}
 
-
+	ImGui::Render();
 	return UPDATE_CONTINUE;
 }
 
