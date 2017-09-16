@@ -10,11 +10,12 @@
 #include "imgui_impl_sdl_gl3.h"
 
 // SDL,GL3W
-#include "../StartingEngine/SDL/include/SDL.h"
-#include "../StartingEngine/SDL/include/SDL_syswm.h"
-#include "../StartingEngine/Glew/include/glew.h"    // This example is using gl3w to access OpenGL functions (because it is small). You may use glew/glad/glLoadGen/etc. whatever already works for you.
+#include "../SDL/include/SDL.h"
 
-#pragma comment (lib, "Glew/libx86/glew32.lib") /* link Microsoft OpenGL lib   */
+#include "../SDL/include/SDL_syswm.h"
+#include "../Glew/include/glew.h"    // This example is using gl3w to access OpenGL functions (because it is small). You may use glew/glad/glLoadGen/etc. whatever already works for you.
+#pragma comment (lib, "Glew/libx86/glew32.lib") // This example is using gl3w to access OpenGL functions (because it is small). You may use glew/glad/glLoadGen/etc. whatever already works for you.
+
 // Data
 static double       g_Time = 0.0f;
 static bool         g_MousePressed[3] = { false, false, false };

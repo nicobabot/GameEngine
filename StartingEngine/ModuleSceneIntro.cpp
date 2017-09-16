@@ -5,9 +5,9 @@
 #include "PhysBody3D.h"
 #include"ModulePlayer.h"
 #include "Glew\include\glew.h"
-#include "imgui_impl_sdl_gl3.h"
+#include "Imgui\imgui_impl_sdl_gl3.h"
 
-#include"imgui.h"
+#include"Imgui\imgui.h"
 
 
 
